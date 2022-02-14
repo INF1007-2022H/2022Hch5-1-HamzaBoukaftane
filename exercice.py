@@ -6,17 +6,22 @@ from typing import List
 
 
 def convert_to_absolute(number: float) -> float:
-    return 0
+    return (number**2)**(1/2)
 
 
 def use_prefixes() -> List[str]:
     prefixes, suffixe = 'JKLMNOPQ', 'ack'
-
-    return [""]
-
+    name_list=[]
+    for letter in prefixes:
+        name_list.append(letter+suffixe)
+    return name_list
 
 def prime_integer_summation() -> int:
-    return 0
+    liste_nbpremier=[]
+
+
+
+    return
 
 
 def factorial(number: int) -> int:
