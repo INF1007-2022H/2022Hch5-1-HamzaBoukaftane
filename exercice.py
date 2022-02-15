@@ -17,24 +17,53 @@ def use_prefixes() -> List[str]:
     return name_list
 
 def prime_integer_summation() -> int:
-    liste_nbpremier=[]
 
-
-
-    return
+    prime=[2,3,5]
+    n=6
+    while len(prime)<100:
+        is_prime=True
+        for i in range(2,n//2):
+            if n%i==0:
+                is_prime=False
+                break
+        if is_prime:
+            prime.append(n)
+        n+=1
+    return sum(prime)
 
 
 def factorial(number: int) -> int:
-    return 0
+    produit=1
+    while number!=1:
+        produit*=number
+        number-=1
+    return produit
 
 
 def use_continue() -> None:
-    pass
+    for i in range(1,11):
+        if i==5:
+            continue
+        print(i)
+
 
 
 def verify_ages(groups: List[List[int]]) -> List[bool]:
-    return []
+    acceptance = []
+    for group in groups:
+        if len(group) > 10 or len(group) <= 3:
+            acceptance.append(False)
+            continue
+        if 25 in group:
+            acceptance.append(True)
+            continue
+        if (min(group) < 18) or (50 in group and max(group) > 70):
+            acceptance.append(False)
+            continue
 
+        acceptance.append(True)
+
+    return acceptance
 
 def main() -> None:
     number = -4.325
